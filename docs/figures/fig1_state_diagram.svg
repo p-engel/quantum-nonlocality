@@ -1,0 +1,90 @@
+<svg width="100%" viewBox="0 0 680 320" xmlns="http://www.w3.org/2000/svg" role="img">
+  <title>GHZ cluster state diagram with polarization boundary qubits</title>
+  <desc>A 1D chain showing two boundary polarization qubits (left and right) stitched via CNOT gates to a bulk GHZ state in the time-bin degree of freedom. Projective measurements on bulk qubits yield a Bell state at the boundaries.</desc>
+
+  <style>
+    text { font-family: sans-serif; fill: #1a1a1a; }
+    .th { font-size: 14px; font-weight: 600; }
+    .ts { font-size: 12px; font-weight: 400; fill: #555; }
+    .wire { stroke: #555; stroke-width: 1.2; fill: none; }
+    .dashed { stroke: #888; stroke-width: 1; stroke-dasharray: 4 3; fill: none; }
+    .teal-box { fill: #E1F5EE; stroke: #0F6E56; stroke-width: 0.8; }
+    .purple-box { fill: #EEEDFE; stroke: #534AB7; stroke-width: 0.8; }
+    .coral-box { fill: #FAECE7; stroke: #993C1D; stroke-width: 0.8; }
+    .teal-text { fill: #085041; }
+    .teal-sub  { fill: #0F6E56; }
+    .purple-text { fill: #3C3489; }
+    .purple-sub  { fill: #534AB7; }
+    .coral-text { fill: #712B13; }
+    .coral-sub  { fill: #993C1D; }
+  </style>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#555" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text class="th" x="340" y="28" text-anchor="middle" fill="#1a1a1a">GHZ bulk + polarization boundary — cluster state structure</text>
+
+  <!-- LEFT BOUNDARY -->
+  <rect x="30" y="100" width="90" height="56" rx="8" class="teal-box"/>
+  <text class="th teal-text" x="75" y="122" text-anchor="middle" dominant-baseline="central">|+⟩_L</text>
+  <text class="ts teal-sub"  x="75" y="142" text-anchor="middle" dominant-baseline="central">polarization</text>
+
+  <!-- CNOT left -->
+  <line x1="120" y1="128" x2="162" y2="128" class="wire" marker-end="url(#arrow)"/>
+  <text class="ts" x="141" y="120" text-anchor="middle">CNOT</text>
+
+  <!-- BULK qubit 1 -->
+  <rect x="164" y="100" width="72" height="56" rx="8" class="purple-box"/>
+  <text class="th purple-text" x="200" y="122" text-anchor="middle" dominant-baseline="central">|q₁⟩</text>
+  <text class="ts purple-sub"  x="200" y="142" text-anchor="middle" dominant-baseline="central">time-bin</text>
+
+  <!-- link -->
+  <line x1="236" y1="128" x2="256" y2="128" class="wire"/>
+  <text class="ts" x="246" y="120" text-anchor="middle">⊗</text>
+
+  <!-- BULK qubit 2 -->
+  <rect x="258" y="100" width="72" height="56" rx="8" class="purple-box"/>
+  <text class="th purple-text" x="294" y="122" text-anchor="middle" dominant-baseline="central">|q₂⟩</text>
+  <text class="ts purple-sub"  x="294" y="142" text-anchor="middle" dominant-baseline="central">time-bin</text>
+
+  <!-- dots -->
+  <text class="th" x="355" y="132" text-anchor="middle" fill="#888">·  ·  ·</text>
+
+  <!-- BULK qubit n -->
+  <rect x="378" y="100" width="72" height="56" rx="8" class="purple-box"/>
+  <text class="th purple-text" x="414" y="122" text-anchor="middle" dominant-baseline="central">|qₙ⟩</text>
+  <text class="ts purple-sub"  x="414" y="142" text-anchor="middle" dominant-baseline="central">time-bin</text>
+
+  <!-- GHZ brace -->
+  <rect x="164" y="80" width="286" height="18" rx="4" fill="none" stroke="#aaa" stroke-width="0.5" stroke-dasharray="4 3"/>
+  <text class="ts" x="307" y="92" text-anchor="middle" fill="#555">GHZ bulk: |00…0⟩ + |11…1⟩</text>
+
+  <!-- CNOT right -->
+  <line x1="450" y1="128" x2="492" y2="128" class="wire" marker-end="url(#arrow)"/>
+  <text class="ts" x="471" y="120" text-anchor="middle">CNOT</text>
+
+  <!-- RIGHT BOUNDARY -->
+  <rect x="494" y="100" width="90" height="56" rx="8" class="teal-box"/>
+  <text class="th teal-text" x="539" y="122" text-anchor="middle" dominant-baseline="central">|+⟩_R</text>
+  <text class="ts teal-sub"  x="539" y="142" text-anchor="middle" dominant-baseline="central">polarization</text>
+
+  <!-- Measurement arrows down from bulk -->
+  <line x1="200" y1="156" x2="200" y2="200" class="dashed" marker-end="url(#arrow)"/>
+  <line x1="294" y1="156" x2="294" y2="200" class="dashed" marker-end="url(#arrow)"/>
+  <line x1="414" y1="156" x2="414" y2="200" class="dashed" marker-end="url(#arrow)"/>
+  <text class="ts" x="307" y="218" text-anchor="middle" fill="#555">projective measurements on bulk qubits</text>
+
+  <!-- Output Bell state -->
+  <line x1="75"  y1="156" x2="75"  y2="252" class="wire"/>
+  <line x1="539" y1="156" x2="539" y2="252" class="wire"/>
+  <line x1="75"  y1="264" x2="539" y2="264" class="wire" marker-end="url(#arrow)"/>
+  <line x1="539" y1="264" x2="75"  y2="264" class="wire" marker-end="url(#arrow)"/>
+
+  <rect x="220" y="268" width="240" height="40" rx="8" class="coral-box"/>
+  <text class="th coral-text" x="340" y="282" text-anchor="middle" dominant-baseline="central">Bell state output</text>
+  <text class="ts coral-sub"  x="340" y="298" text-anchor="middle" dominant-baseline="central">|Φ⁺⟩ or |Ψ⁻⟩ (deterministic)</text>
+</svg>
