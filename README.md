@@ -1,6 +1,7 @@
-# Quantum Information Processing
+# Nonlocal Correlations from GHZ Bulk States
 
-A collaborative research repository exploring quantum algorithms and circuit design using [Qiskit](https://www.ibm.com/quantum/qiskit).
+<!-- A collaborative research repository exploring quantum algorithms and
+circuit design using [Qiskit](https://www.ibm.com/quantum/qiskit). -->
 
 > **Authors:** Jinwon Yoo · [C. Praise Anyanwu](https://github.com/p-engel)
 
@@ -106,7 +107,7 @@ QiskitRuntimeService.save_account(channel="ibm_quantum", token="YOUR_TOKEN")
 
 Free accounts have access to several real devices. For most algorithm development, the local **Aer simulator** is faster and sufficient.
 
----
+<!--
 
 ## Collaboration Guide
 
@@ -135,7 +136,7 @@ The repository owner can go to:
 
 Your collaborator will receive an email invite and, once accepted, will have push access.
 
----
+-->
 
 ## Roadmap
 
