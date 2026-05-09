@@ -1,0 +1,17 @@
+name: qiskit-env
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.11
+  - numpy>=1.26
+  - scipy>=1.12
+  - matplotlib>=3.8
+  - jupyter
+  - jupyterlab>=4.0
+  - ipykernel
+  - pip
+  - pip:
+    - qiskit>=2.0
+    - qiskit-aer>=0.14
+    - qiskit-ibm-runtime>=0.20

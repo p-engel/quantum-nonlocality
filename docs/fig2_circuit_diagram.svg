@@ -1,0 +1,126 @@
+<svg width="100%" viewBox="0 0 680 340" xmlns="http://www.w3.org/2000/svg" role="img">
+  <title>Quantum circuit diagram for GHZ cluster state with polarization boundary qubits</title>
+  <desc>Circuit showing state preparation, CNOT stitching of boundary polarization qubits to the GHZ bulk, projective measurements on bulk qubits, classical feedforward, Pauli corrections, and Bell state readout.</desc>
+
+  <style>
+    text { font-family: sans-serif; fill: #1a1a1a; }
+    .th { font-size: 14px; font-weight: 600; }
+    .ts { font-size: 12px; font-weight: 400; fill: #555; }
+    .wire   { stroke: #555; stroke-width: 1; fill: none; }
+    .cwire  { stroke: #555; stroke-width: 1.5; fill: none; }
+    .dashed { stroke: #999; stroke-width: 1; stroke-dasharray: 3 3; fill: none; }
+    .gate-blue   { fill: #E6F1FB; stroke: #185FA5; stroke-width: 0.8; }
+    .gate-purple { fill: #EEEDFE; stroke: #534AB7; stroke-width: 0.8; }
+    .gate-amber  { fill: #FAEEDA; stroke: #854F0B; stroke-width: 0.8; }
+    .gate-gray   { fill: #F1EFE8; stroke: #5F5E5A; stroke-width: 0.8; }
+    .gate-coral  { fill: #FAECE7; stroke: #993C1D; stroke-width: 0.8; }
+    .blue-text   { fill: #0C447C; }
+    .purple-text { fill: #3C3489; }
+    .amber-text  { fill: #633806; }
+    .gray-text   { fill: #444441; }
+    .coral-text  { fill: #712B13; }
+    .coral-sub   { fill: #993C1D; }
+  </style>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#555" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="arrow-dash" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#999" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text class="th" x="340" y="24" text-anchor="middle" fill="#1a1a1a">Quantum circuit — GHZ bulk + polarization boundary qubits</text>
+
+  <!-- Wire labels -->
+  <text class="ts" x="72" y="64"  text-anchor="end" fill="#555">|0⟩_L  pol</text>
+  <text class="ts" x="72" y="124" text-anchor="end" fill="#555">|0⟩₁  time</text>
+  <text class="ts" x="72" y="164" text-anchor="end" fill="#555">|0⟩₂  time</text>
+  <text class="ts" x="72" y="204" text-anchor="end" fill="#555">|0⟩ₙ  time</text>
+  <text class="ts" x="72" y="264" text-anchor="end" fill="#555">|0⟩_R  pol</text>
+
+  <!-- Horizontal wires -->
+  <line x1="76" y1="60"  x2="630" y2="60"  class="wire"/>
+  <line x1="76" y1="120" x2="630" y2="120" class="wire"/>
+  <line x1="76" y1="160" x2="630" y2="160" class="wire"/>
+  <line x1="76" y1="200" x2="630" y2="200" class="wire"/>
+  <line x1="76" y1="260" x2="630" y2="260" class="wire"/>
+
+  <!-- dots between q2 and qn -->
+  <text class="th" x="307" y="184" text-anchor="middle" fill="#aaa">·  ·  ·</text>
+
+  <!-- Col 1: State prep -->
+  <!-- H on q_L -->
+  <rect x="90" y="46" width="28" height="28" rx="4" class="gate-blue"/>
+  <text class="th blue-text" x="104" y="60" text-anchor="middle" dominant-baseline="central">H</text>
+  <!-- H on q_R -->
+  <rect x="90" y="246" width="28" height="28" rx="4" class="gate-blue"/>
+  <text class="th blue-text" x="104" y="260" text-anchor="middle" dominant-baseline="central">H</text>
+  <!-- GHZ prep block -->
+  <rect x="86" y="106" width="120" height="108" rx="6" class="gate-purple"/>
+  <text class="th purple-text" x="146" y="148" text-anchor="middle" dominant-baseline="central">GHZ prep</text>
+  <text class="ts" x="146" y="166" text-anchor="middle" fill="#534AB7">|00…0⟩+|11…1⟩</text>
+  <text class="ts" x="146" y="228" text-anchor="middle" fill="#888">bulk state</text>
+
+  <!-- Col 2: CNOT stitching -->
+  <!-- CNOT left: control q_L, target q1 -->
+  <circle cx="256" cy="60" r="5" fill="#1a1a1a"/>
+  <line x1="256" y1="65" x2="256" y2="110" stroke="#1a1a1a" stroke-width="1.2" fill="none"/>
+  <circle cx="256" cy="120" r="10" fill="none" stroke="#1a1a1a" stroke-width="1.2"/>
+  <line x1="246" y1="120" x2="266" y2="120" stroke="#1a1a1a" stroke-width="1.2" fill="none"/>
+  <line x1="256" y1="110" x2="256" y2="130" stroke="#1a1a1a" stroke-width="1.2" fill="none"/>
+  <text class="ts" x="256" y="86" text-anchor="middle" fill="#555">CNOT_L</text>
+
+  <!-- CNOT right: control q_R, target qn -->
+  <circle cx="256" cy="260" r="5" fill="#1a1a1a"/>
+  <line x1="256" y1="208" x2="256" y2="255" stroke="#1a1a1a" stroke-width="1.2" fill="none"/>
+  <circle cx="256" cy="200" r="10" fill="none" stroke="#1a1a1a" stroke-width="1.2"/>
+  <line x1="246" y1="200" x2="266" y2="200" stroke="#1a1a1a" stroke-width="1.2" fill="none"/>
+  <line x1="256" y1="190" x2="256" y2="210" stroke="#1a1a1a" stroke-width="1.2" fill="none"/>
+  <text class="ts" x="256" y="240" text-anchor="middle" fill="#555">CNOT_R</text>
+
+  <!-- Col 3: Measure bulk -->
+  <rect x="350" y="108" width="36" height="24" rx="4" class="gate-amber"/>
+  <text class="th amber-text" x="368" y="120" text-anchor="middle" dominant-baseline="central">M</text>
+  <rect x="350" y="148" width="36" height="24" rx="4" class="gate-amber"/>
+  <text class="th amber-text" x="368" y="160" text-anchor="middle" dominant-baseline="central">M</text>
+  <rect x="350" y="188" width="36" height="24" rx="4" class="gate-amber"/>
+  <text class="th amber-text" x="368" y="200" text-anchor="middle" dominant-baseline="central">M</text>
+  <text class="ts" x="368" y="228" text-anchor="middle" fill="#888">projective</text>
+
+  <!-- Classical output double lines -->
+  <line x1="386" y1="119" x2="440" y2="119" class="cwire"/>
+  <line x1="386" y1="123" x2="440" y2="123" class="cwire"/>
+  <line x1="386" y1="159" x2="440" y2="159" class="cwire"/>
+  <line x1="386" y1="163" x2="440" y2="163" class="cwire"/>
+  <line x1="386" y1="199" x2="440" y2="199" class="cwire"/>
+  <line x1="386" y1="203" x2="440" y2="203" class="cwire"/>
+
+  <text class="ts" x="416" y="145" text-anchor="middle" fill="#555">classical</text>
+  <text class="ts" x="416" y="157" text-anchor="middle" fill="#555">feedforward</text>
+
+  <!-- Col 4: Pauli corrections -->
+  <rect x="490" y="46" width="52" height="28" rx="4" class="gate-gray"/>
+  <text class="th gray-text" x="516" y="60" text-anchor="middle" dominant-baseline="central">X/Z corr</text>
+  <rect x="490" y="246" width="52" height="28" rx="4" class="gate-gray"/>
+  <text class="th gray-text" x="516" y="260" text-anchor="middle" dominant-baseline="central">X/Z corr</text>
+
+  <!-- feedforward arrows to corrections -->
+  <path d="M440 140 L460 140 L460 70 L488 70" class="dashed" marker-end="url(#arrow-dash)"/>
+  <path d="M440 200 L460 200 L460 252 L488 252" class="dashed" marker-end="url(#arrow-dash)"/>
+
+  <!-- Col 5: Bell state output -->
+  <rect x="556" y="46" width="68" height="228" rx="8" class="gate-coral"/>
+  <text class="th coral-text" x="590" y="148" text-anchor="middle" dominant-baseline="central">Bell</text>
+  <text class="th coral-text" x="590" y="168" text-anchor="middle" dominant-baseline="central">state</text>
+  <text class="ts coral-sub"  x="590" y="188" text-anchor="middle" dominant-baseline="central">|Φ⁺⟩ or |Ψ⁻⟩</text>
+
+  <!-- Stage labels -->
+  <text class="ts" x="120" y="320" text-anchor="middle" fill="#888">1. Prep</text>
+  <text class="ts" x="256" y="320" text-anchor="middle" fill="#888">2. Stitch</text>
+  <text class="ts" x="368" y="320" text-anchor="middle" fill="#888">3. Measure bulk</text>
+  <text class="ts" x="516" y="320" text-anchor="middle" fill="#888">4. Correct</text>
+  <text class="ts" x="590" y="320" text-anchor="middle" fill="#888">5. Output</text>
+</svg>
