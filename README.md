@@ -1,9 +1,10 @@
 # Nonlocal Correlations from GHZ Bulk States
 
-<!-- A collaborative research repository exploring quantum algorithms and
-circuit design using [Qiskit](https://www.ibm.com/quantum/qiskit). -->
+<!-- A collaborative research repository on measurement-based quantum
+computation with photonic qubits, using
+[Qiskit](https://www.ibm.com/quantum/qiskit). -->
 
-> **Authors:** Jinwon Yoo · [C. Praise Anyanwu](https://github.com/p-engel)
+> **Authors:** Jinwon Yoo; [C. Praise Anyanwu](https://github.com/p-engel)
 
 ---
 
@@ -32,19 +33,20 @@ This connects to the broader framework of quantum nonlocality: the measurement o
 ## Repository Structure
 
 ```
-quantum-info-repo/
-├── notebooks/               # Jupyter notebooks (main working environment)
-│   ├── 00_qiskit_primer.ipynb       # Qiskit fundamentals & first circuits
-│   ├── 01_single_qubit_gates.ipynb  # Bloch sphere, rotations, Hadamard
-│   ├── 02_entanglement_bells.ipynb  # Bell states, CNOT, entanglement
-│   └── 03_grover_search.ipynb       # Grover's algorithm walkthrough
-├── src/                     # Reusable Python modules
-│   ├── circuit_utils.py     # Helper functions for building/visualizing circuits
-│   └── algorithms.py        # Modular algorithm implementations
-├── docs/                    # Notes, derivations, references
-│   └── resources.md         # Curated reading list
-├── environment.yml          # Conda environment spec
-├── requirements.txt         # pip alternative
+quantum-nonlocality/
+├── notebooks/
+│   ├── 00_qiskit_primer.ipynb              # Qiskit fundamentals & first circuits
+│   ├── 01_bell_and_ghz.ipynb               # Bell states & GHZ state preparation
+│   ├── 02_hybrid_state_construction.ipynb  # CNOT stitching & hybrid state
+│   └── 03_mbqc_protocol.ipynb              # MBQC protocol & feedforward (sketch)
+├── docs/
+│   ├── figures/
+│   │   ├── fig1_state_diagram.svg          # State structure diagram
+│   │   └── fig2_circuit_diagram.svg        # Quantum circuit diagram
+│   ├── resources.md                        # Curated reading list
+│   └── github_setup_guide.md               # Collaboration setup instructions
+├── environment.yml                         # Conda environment spec
+├── requirements.txt                        # pip alternative
 └── README.md
 ```
 
@@ -55,8 +57,8 @@ quantum-info-repo/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/p-engel/quantum-info-repo.git
-cd quantum-info-repo
+git clone https://github.com/p-engel/quantum-nonlocality.git
+cd quantum-nonlocality
 ```
 
 ### 2. Set up the environment
@@ -64,7 +66,7 @@ cd quantum-info-repo
 **With conda (recommended):**
 ```bash
 conda env create -f environment.yml
-conda activate quantum-env
+conda activate qiskit-env
 ```
 
 **With pip:**
