@@ -12,8 +12,7 @@ computation with photonic qubits, using
 
 This repository investigates a measurement-based quantum computation (MBQC)
 scheme in which a GHZ state encoded in the time-bin degree of freedom of single
-photons serves as a bulk resource, and two polarization qubits act as boundary
-nodes.
+photons serves as a bulk resource, and two qubits act as boundary nodes.
 
 <!-- The boundary polarization qubits — each initialized in |+⟩ — are stitched to the GHZ bulk via CNOT gates, forming a hybrid entangled state with a cluster-state-like structure at the boundaries and a GHZ backbone in the bulk. Projective measurements on the bulk time-bin qubits then drive the computation. The goal is to show that an appropriate choice of measurement basis deterministically projects the two boundary polarization qubits into a target Bell state — either |Φ⁺⟩ = (|00⟩ + |11⟩)/√2 or |Ψ⁻⟩ = (|01⟩ − |10⟩)/√2 — up to known Pauli corrections from classical feedforward.
 -->
