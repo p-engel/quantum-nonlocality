@@ -4,7 +4,8 @@
 computation with photonic qubits, using
 [Qiskit](https://www.ibm.com/quantum/qiskit). -->
 
-> **Authors:** Jinwon Yoo; [C. Praise Anyanwu](https://github.com/p-engel)
+> **Authors:** [Jinwon Yoo](https://github.com/Jamesddin); 
+[C. Praise Anyanwu](https://github.com/p-engel)
 
 ---
 
