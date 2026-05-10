@@ -43,7 +43,6 @@
   <text class="th node-text" x="220" y="104" text-anchor="middle" dominant-baseline="central">|+⟩</text>
   <text class="ts node-sub"  x="220" y="122" text-anchor="middle">q₂</text>
 
-  <circle cx="350" cy="108" r="34" class="node-fill" cx="360"/>
   <circle cx="360" cy="108" r="34" class="node-fill"/>
   <text class="th node-text" x="360" y="104" text-anchor="middle" dominant-baseline="central">|+⟩</text>
   <text class="ts node-sub"  x="360" y="122" text-anchor="middle">q₃</text>
