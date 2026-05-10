@@ -10,16 +10,43 @@ computation with photonic qubits, using
 
 ## Overview
 
-This repository investigates a measurement-based quantum computation (MBQC) scheme in which a GHZ state encoded in the time-bin degree of freedom of single photons serves as a bulk resource, and two polarization qubits act as boundary nodes.
+This repository investigates a measurement-based quantum computation (MBQC)
+scheme in which a GHZ state encoded in the time-bin degree of freedom of single
+photons serves as a bulk resource, and two polarization qubits act as boundary
+nodes.
 
-The boundary polarization qubits — each initialized in |+⟩ — are stitched to the GHZ bulk via CNOT gates, forming a hybrid entangled state with a cluster-state-like structure at the boundaries and a GHZ backbone in the bulk. Projective measurements on the bulk time-bin qubits then drive the computation. The goal is to show that an appropriate choice of measurement basis deterministically projects the two boundary polarization qubits into a target Bell state — either |Φ⁺⟩ = (|00⟩ + |11⟩)/√2 or |Ψ⁻⟩ = (|01⟩ − |10⟩)/√2 — up to known Pauli corrections from classical feedforward.
+<!-- The boundary polarization qubits — each initialized in |+⟩ — are stitched to the GHZ bulk via CNOT gates, forming a hybrid entangled state with a cluster-state-like structure at the boundaries and a GHZ backbone in the bulk. Projective measurements on the bulk time-bin qubits then drive the computation. The goal is to show that an appropriate choice of measurement basis deterministically projects the two boundary polarization qubits into a target Bell state — either |Φ⁺⟩ = (|00⟩ + |11⟩)/√2 or |Ψ⁻⟩ = (|01⟩ − |10⟩)/√2 — up to known Pauli corrections from classical feedforward.
+-->
 
-This connects to the broader framework of quantum nonlocality: the measurement outcomes on the bulk qubits exhibit nonlocal correlations, and the entanglement of the boundary photons in the polarization basis is a direct signature of this nonlocality.
+The boundary qubits are initialized in |+⟩ and are stitched to the GHZ bulk via
+gates to form a hybrid entangled state: a cluster-state-like structure at the
+boundaries and a GHZ backbone in the bulk. Measurements on the bulk GHZ qubits
+then drive the computation. The goal is to show that an appropriate choice of
+measurement basis deterministically projects the two boundary polarization
+qubits into a target Bell state, either 
+|Φ⁺⟩ = (|00⟩ + |11⟩)/√2 or |Ψ⁻⟩ = (|01⟩ − |10⟩)/√2, 
+up to known Pauli corrections from classical feedforward.
+
+This connects to the broader framework of quantum nonlocality: the measurement
+outcomes on the bulk qubits exhibit nonlocal correlations, and the entanglement
+of the boundary photons in the polarization basis is a direct signature of this
+nonlocality.
 
 ---
 
 ## Figures
 
+These are the standard elements from which we build the entanglement correlations in this project.
+
+**Fig. 1 — 1D cluster state:** A linear chain of qubits in |+⟩ connected by CZ gates — the canonical resource state for measurement-based quantum computation. Single-qubit measurements M(θᵢ) in a chosen basis drive the computation through the chain.
+
+![1D cluster state](docs/figures/fig1_cluster_state.svg)
+
+**Fig. 2 — Bell state measurement circuit:** The standard circuit for identifying which of the four Bell states is present. A CNOT followed by a Hadamard rotates the Bell basis into the computational basis, after which a simple measurement reveals the state.
+
+![Bell measurement circuit](docs/figures/fig2_bell_measurement.svg)
+
+<!--
 **Fig. 1 — State structure:** GHZ bulk (time-bin DOF) stitched to boundary polarization qubits via CNOT gates. Projective measurements on the bulk yield a deterministic Bell state at the boundaries.
 
 ![State diagram](docs/figures/fig1_state_diagram.svg)
@@ -27,6 +54,8 @@ This connects to the broader framework of quantum nonlocality: the measurement o
 **Fig. 2 — Quantum circuit:** Full gate sequence from state preparation through CNOT stitching, bulk measurement, classical feedforward, Pauli correction, and Bell state readout.
 
 ![Circuit diagram](docs/figures/fig2_circuit_diagram.svg)
+
+-->
 
 ---
 
@@ -154,9 +183,11 @@ Your collaborator will receive an email invite and, once accepted, will have pus
 - [ ] Full hybrid state construction and simulation
 
 **Phase 3 — MBQC Protocol**
+<!--
 - [ ] Projective measurement implementation on bulk qubits
 - [ ] Classical feedforward and Pauli correction logic
 - [ ] Deterministic Bell state output verification (|Φ⁺⟩ and |Ψ⁻⟩)
+-->
 
 **Phase 4 — Analysis**
 - [ ] Bell inequality violation tests on output state

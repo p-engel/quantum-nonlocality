@@ -1,0 +1,71 @@
+<svg width="100%" viewBox="0 0 680 240" xmlns="http://www.w3.org/2000/svg" role="img">
+  <title>Bell state measurement circuit</title>
+  <desc>Standard Bell measurement circuit: CNOT followed by Hadamard on the control qubit, then computational basis measurement of both qubits to identify which Bell state was present.</desc>
+
+  <style>
+    text { font-family: sans-serif; fill: #1a1a1a; }
+    .th { font-size: 14px; font-weight: 600; }
+    .ts { font-size: 12px; font-weight: 400; fill: #555; }
+    .wire   { stroke: #aaa; stroke-width: 1; fill: none; }
+    .cwire  { stroke: #555; stroke-width: 1.5; fill: none; }
+    .blue-fill   { fill: #E6F1FB; stroke: #185FA5; stroke-width: 0.8; }
+    .blue-text   { fill: #0C447C; }
+    .teal-fill   { fill: #E1F5EE; stroke: #0F6E56; stroke-width: 0.8; }
+    .teal-text   { fill: #085041; }
+    .coral-fill  { fill: #FAECE7; stroke: #993C1D; stroke-width: 0.8; }
+    .coral-text  { fill: #712B13; }
+    .coral-sub   { fill: #993C1D; }
+  </style>
+
+  <!-- Title -->
+  <text class="th" x="340" y="26" text-anchor="middle" fill="#1a1a1a">Fig. 2 — Bell state measurement circuit</text>
+
+  <!-- Wire labels -->
+  <text class="ts" x="68" y="88"  text-anchor="end" fill="#555">q₁</text>
+  <text class="ts" x="68" y="148" text-anchor="end" fill="#555">q₂</text>
+
+  <!-- Wires -->
+  <line x1="72" y1="88"  x2="610" y2="88"  class="wire"/>
+  <line x1="72" y1="148" x2="610" y2="148" class="wire"/>
+
+  <!-- CNOT: control q1, target q2 -->
+  <circle cx="200" cy="88" r="6" fill="#1a1a1a"/>
+  <line x1="200" y1="94" x2="200" y2="136" stroke="#1a1a1a" stroke-width="1.5" fill="none"/>
+  <circle cx="200" cy="148" r="14" fill="none" stroke="#1a1a1a" stroke-width="1.5"/>
+  <line x1="186" y1="148" x2="214" y2="148" stroke="#1a1a1a" stroke-width="1.5" fill="none"/>
+  <line x1="200" y1="134" x2="200" y2="162" stroke="#1a1a1a" stroke-width="1.5" fill="none"/>
+  <text class="ts" x="200" y="178" text-anchor="middle" fill="#888">CNOT</text>
+
+  <!-- Hadamard on q1 -->
+  <rect x="298" y="70" width="44" height="36" rx="4" class="blue-fill"/>
+  <text class="th blue-text" x="320" y="88" text-anchor="middle" dominant-baseline="central">H</text>
+  <text class="ts" x="320" y="178" text-anchor="middle" fill="#888">Hadamard</text>
+
+  <!-- Measure q1 -->
+  <rect x="418" y="70" width="44" height="36" rx="4" class="teal-fill"/>
+  <text class="th teal-text" x="440" y="88" text-anchor="middle" dominant-baseline="central">M</text>
+
+  <!-- Measure q2 -->
+  <rect x="418" y="130" width="44" height="36" rx="4" class="teal-fill"/>
+  <text class="th teal-text" x="440" y="148" text-anchor="middle" dominant-baseline="central">M</text>
+  <text class="ts" x="440" y="178" text-anchor="middle" fill="#888">Measure</text>
+
+  <!-- Classical double lines -->
+  <line x1="462" y1="86"  x2="556" y2="86"  class="cwire"/>
+  <line x1="462" y1="90"  x2="556" y2="90"  class="cwire"/>
+  <line x1="462" y1="146" x2="556" y2="146" class="cwire"/>
+  <line x1="462" y1="150" x2="556" y2="150" class="cwire"/>
+
+  <!-- Output Bell ID box -->
+  <rect x="556" y="70" width="96" height="96" rx="6" class="coral-fill"/>
+  <text class="th coral-text" x="604" y="104" text-anchor="middle" dominant-baseline="central">Bell</text>
+  <text class="th coral-text" x="604" y="122" text-anchor="middle" dominant-baseline="central">state ID</text>
+  <text class="ts coral-sub"  x="604" y="148" text-anchor="middle">00,01,10,11</text>
+  <text class="ts" x="604" y="178" text-anchor="middle" fill="#888">Identify</text>
+
+  <!-- Stage labels -->
+  <text class="ts" x="200" y="210" text-anchor="middle" fill="#888">1. Entangle</text>
+  <text class="ts" x="320" y="210" text-anchor="middle" fill="#888">2. Rotate</text>
+  <text class="ts" x="440" y="210" text-anchor="middle" fill="#888">3. Measure</text>
+  <text class="ts" x="604" y="210" text-anchor="middle" fill="#888">4. Identify</text>
+</svg>
